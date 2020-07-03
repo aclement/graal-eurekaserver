@@ -31,6 +31,7 @@ echo "Compiling $ARTIFACT with $GRAALVM_VERSION"
   -H:Name=$ARTIFACT \
   -Dspring.native.remove-jmx-support=true \
   -Dspring.native.remove-yaml-support=true \
+  -Dspring.native.missing-selector-hints=warning \
   -Dspring.xml.ignore=true \
   -Dspring.spel.ignore=true \
   -cp $CP:../../graal $MAINCLASS >> output.txt ; } 2>> output.txt
